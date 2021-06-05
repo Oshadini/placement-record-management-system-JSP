@@ -1,0 +1,78 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+         <%@ page import="java.util.List,java.util.LinkedList,java.lang.Object" %> 
+            <%@ page import="java.sql.*,java.io.*,javax.sql.*,java.text.SimpleDateFormat,java.util.Date" %> 
+            <%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%><%@page import="java.sql.Connection"%>   
+    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href = "style.css" type="text/css">
+<title>Insert title here</title>
+</head>
+<body>
+<div class = box>
+	<form>
+	
+<table border='1' bgcolor="yellow" height="20%" width="100%">
+   <tr><th>Company Name</th><th>Position</th><th>Application Deadline</th><th>Vacancy Availability</th><th>View</th></tr>
+
+<% 
+
+
+Connection conn=null;
+Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/placement?useTimezone=true&serverTimezone=UTC", "oshi", "polonnaruwa123");
+Statement st=conn.createStatement();
+
+ResultSet rs = st.executeQuery("select * from vacancy_availability");
+%>
+
+
+<% 
+while(rs.next()){
+	
+	
+	%>
+	
+
+	
+	<tr>
+	
+	
+	<td><%out.println(rs.getString(3));%></td>
+    <td><%=rs.getString(4)%></td>
+	<td><%=rs.getString(5)%></td>
+	<td><%=rs.getString(6)%></td>
+	
+	<td><a href="studentVacancyDetailsView.jsp?vac_id=<%=rs.getString(1)%>">View</a></td>
+
+	
+	</tr>
+
+	
+	</br>
+	
+	<% 
+	
+	
+	
+	
+}
+
+
+
+
+
+
+%>
+	
+</table>
+</br>
+<input type="submit" value="Back" name="back" formaction="adminHome.jsp">
+</div>
+</form>
+</body>
+</html>

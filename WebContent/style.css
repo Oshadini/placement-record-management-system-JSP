@@ -1,0 +1,161 @@
+@charset "ISO-8859-1";
+
+body {
+	margin:0;
+	padding :0;
+	background: url(Working-home.jpg);
+	background-size: cover;
+	
+	font-family: sans-serif;
+		
+	
+}
+
+
+
+.box{
+
+
+	position: absolute;
+	top: 100%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	width: 350px;
+	height:950px;
+	box-sizing: border-box;
+	background: rgba(0,0,0,.5);
+	
+	
+}
+
+
+h1{
+	
+	margin: 0;
+	padding: 0 0 20px;
+	color: #efed40;
+	text-align: center;
+	
+}
+
+h2{
+	
+	margin: 0;
+	padding: 0 0 20px;
+	color: #efed44;
+	text-align: center;
+	
+}
+
+h3{
+	
+	margin: 0;
+	padding: 0 0 20px;
+	color: #efed40;
+	text-align: center;
+	
+}
+
+h4{
+	
+	margin: 0;
+	padding: 0 0 20px;
+	color: #efed40;
+	text-align: left;
+	
+}
+
+
+.box p{
+	
+		margin: 0;
+	padding: 0;
+	font-weight: bold;
+	color: #fff;
+	margin-left: 20px;
+	width: 80%;
+	
+}
+
+.box a{
+	
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	color: #fff;
+	width: 80%;
+	text-align: left;
+}
+.box input{
+	width: 80%;
+	margin-bottom: 20px;
+	margin-left: 20px;
+}
+
+
+.box input[type="text"],
+.box input[type="password"],
+.box input[type="email"]
+
+{
+	border: none;
+	border-bottom: 7px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size : 16px;
+}
+
+::placeholder
+{
+	color: rgba(255,255,255,.5);
+}
+
+.box input[type="submit"]
+{
+	
+		border: none;
+	
+	outline: none;
+	height: 40px;
+	color: #fff;
+		font-size : 16px;
+			background: #efed40;
+			
+			cursor:pointer;
+			border-radius: 20px;
+}
+
+
+.box input[type="submit"]:hover
+
+{
+		background: #efed40;
+		color: 262626;
+	
+}
+
+
+.box input[type="reset"]
+{
+	
+		border: none;
+	
+	outline: none;
+	height: 40px;
+	color: #fff;
+		font-size : 16px;
+			background: #efed40;
+			
+			cursor:pointer;
+			border-radius: 20px;
+}
+
+
+
+
+
+
+
+
